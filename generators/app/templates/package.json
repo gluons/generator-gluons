@@ -1,0 +1,26 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "./index.js",
+  "scripts": {<% if (mocha) { %>
+    "test": "mocha"<% } else { %>
+    "test": "echo \"Error: no test specified\" && exit 1"<% } %>
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": <%- keywords %>,
+  "author": "<%- author %>",
+  "license": "<%= license %>",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-gluons": "^1.0.4"<% if (mocha) { %>,
+    "mocha": "*"<% } %>
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "generator-gluons",
+  "version": "1.0.0",
+  "description": "Gluons' personal scaffolding generator.",
+  "files": [
+    "generators"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/generator-gluons.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "gluons"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/gluons/generator-gluons/issues"
+  },
+  "homepage": "https://github.com/gluons/generator-gluons",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-gluons": "^1.0.4",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "lpad": "^2.0.1",
+    "trimstart": "^1.0.1",
+    "validate-npm-package-name": "^3.0.0",
+    "yeoman-generator": "^1.1.1"
+  }
+}
