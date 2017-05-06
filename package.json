@@ -33,7 +33,7 @@
   "dependencies": {
     "git-repo-info": "^1.4.1",
     "github-username": "^4.0.0",
-    "is-git-repository": "^1.1.0",
+    "is-git-repository": "^1.1.1",
     "lpad": "^2.0.1",
     "parse-author": "^2.0.0",
     "trimstart": "^1.0.1",

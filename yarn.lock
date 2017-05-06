@@ -784,9 +784,9 @@ is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
 
-is-git-repository@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-git-repository/-/is-git-repository-1.1.0.tgz#f0a81ac957223f7305bc23683dd9871e9c8b1bf6"
+is-git-repository@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/is-git-repository/-/is-git-repository-1.1.1.tgz#c68e4b7a806422349aaec488973a90558d7e9be0"
   dependencies:
     execa "^0.6.1"
     path-is-absolute "^1.0.1"
