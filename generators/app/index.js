@@ -93,19 +93,32 @@ module.exports = class extends Generator {
 		let src = this.templatePath('*');
 		let dest = this.destinationPath();
 
-		utils.getGitHubUsername(dest).then(username => {
-			if (username) {
-				this.props.username = username;
-			} else {
-				this.props.username = MY_USERNAME;
-			}
-		});
+		return utils.getGitHubUsername(dest)
+			.then(
+				username => {
+					if (username) {
+						this.props.username = username;
+					} else {
+						this.props.username = MY_USERNAME;
+					}
 
-		this.fs.copyTpl(src, dest, this.props, {}, {
-			globOptions: {
-				dot: true
-			}
-		});
+					return this.props;
+				},
+				() => {
+					this.props.username = MY_USERNAME;
+
+					return this.props;
+				}
+			).then(props => {
+
+				this.fs.copyTpl(src, dest, props, {}, {
+					globOptions: {
+						dot: true
+					}
+				});
+
+				return Promise.resolve();
+			});
 	}
 	install() {
 		this.yarnInstall();

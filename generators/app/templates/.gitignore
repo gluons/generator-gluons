@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/node,windows,linux
+# Created by https://www.gitignore.io/api/node,linux,windows
 
 ### Linux ###
 *~
@@ -98,4 +98,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,windows,linux
+# End of https://www.gitignore.io/api/node,linux,windows
