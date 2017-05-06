@@ -1,6 +1,6 @@
 {
   "name": "generator-gluons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gluons' personal scaffolding generator.",
   "files": [
     "generators"
