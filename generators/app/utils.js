@@ -1,6 +1,11 @@
-const validate = require('validate-npm-package-name');
+const fs = require('fs');
+const getRepoInfo = require('git-repo-info');
+const githubUsername = require('github-username');
+const isGit = require('is-git-repository');
 const lpad = require('lpad');
+const parseAuthor = require('parse-author');
 const trimStart = require('trimstart');
+const validate = require('validate-npm-package-name');
 
 function validateName(name) {
 	let validationResult = validate(name);
@@ -25,7 +30,24 @@ function transformKeywords(keywords) {
 	return keywordsStr;
 }
 
+function getGitHubUsername(path) {
+	if (fs.existsSync(path) && isGit(path)) {
+		let repoInfo = getRepoInfo(path);
+
+		if (repoInfo && repoInfo.author) {
+			let author = parseAuthor(repoInfo.author);
+
+			if (author && author.email) {
+				return githubUsername(author.email);
+			}
+		}
+	}
+
+	return Promise.resolve(null);
+}
+
 module.exports = {
-	validateName,
-	transformKeywords
+	getGitHubUsername,
+	transformKeywords,
+	validateName
 };

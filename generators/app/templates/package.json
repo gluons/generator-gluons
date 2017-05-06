@@ -20,7 +20,7 @@
   "homepage": "",
   "devDependencies": {
     "eslint": "^3.18.0",
-    "eslint-config-gluons": "^1.0.4"<% if (mocha) { %>,
+    "eslint-config-gluons": "^2.0.1"<% if (mocha) { %>,
     "mocha": "*"<% } %>
   }
 }

@@ -3,6 +3,8 @@ const Generator = require('yeoman-generator');
 
 const utils = require('./utils');
 
+const MY_USERNAME = 'gluons';
+
 module.exports = class extends Generator {
 	constructor(args, opts) {
 		super(args, opts);
@@ -90,6 +92,15 @@ module.exports = class extends Generator {
 		}
 		let src = this.templatePath('*');
 		let dest = this.destinationPath();
+
+		utils.getGitHubUsername(dest).then(username => {
+			if (username) {
+				this.props.username = username;
+			} else {
+				this.props.username = MY_USERNAME;
+			}
+		});
+
 		this.fs.copyTpl(src, dest, this.props, {}, {
 			globOptions: {
 				dot: true
