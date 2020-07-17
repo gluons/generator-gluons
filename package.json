@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/gluons/generator-gluons",
   "devDependencies": {
-    "eslint": "^3.18.0",
+    "eslint": "^4.18.2",
     "eslint-config-gluons": "^2.0.1",
     "mocha": "*"
   },
